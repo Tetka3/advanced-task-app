@@ -18,11 +18,15 @@ const Home = () => {
             body: "This is the body of the second post"
         }
     ])
+
+    const deleteTask = (id) => {
+        console.log("delete", id)
+    }
   return (
     <div className="home">
         <Navbar /> 
         <AddTasks />
-        <Tasks tasks={tasks}/>         
+        <Tasks tasks={tasks} onDelete={deleteTask}/>         
     </div>
   )
 }
