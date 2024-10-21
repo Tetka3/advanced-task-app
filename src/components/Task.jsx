@@ -5,7 +5,7 @@ const Task = ({ task, onDelete }) => {
     <div className='task' >
         <h2 >{task.title}</h2>
         <p>{task.body}</p> 
-        <button onClick={onDelete}>Delete Task</button>     
+        <button onClick={() => onDelete(task.id)}>Delete Task</button>     
     </div>
   )
 }
