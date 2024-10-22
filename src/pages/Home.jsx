@@ -25,7 +25,7 @@ const Home = () => {
         console.log(task)
         const newTask = { id, ...task}
         console.log(newTask)
-        // setTasks([...tasks, newTask])
+        setTasks([...tasks, newTask])
         
     } 
 
