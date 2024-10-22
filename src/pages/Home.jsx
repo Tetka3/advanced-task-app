@@ -21,12 +21,8 @@ const Home = () => {
     
     const addTasks = (task) => {
         const id = Math.floor(Math.random() * 10000 + 1)
-        console.log(id)
-        console.log(task)
-        const newTask = { id, ...task}
-        console.log(newTask)
-        setTasks([...tasks, newTask])
-        
+        const newTask = { id, ...task}        
+        setTasks([...tasks, newTask])        
     } 
 
     const deleteTask = (id) => {
