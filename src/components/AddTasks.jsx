@@ -22,6 +22,8 @@ const AddTasks = () => {
             alert('Add a title & text')
             return
         }
+
+        onAdd({title, body})
         setTitle('')
         setBody('')
     }
