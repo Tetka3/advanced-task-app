@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './style.css';
 
 
-const AddTasks = () => {
+const AddTasks = ({ onAdd }) => {
 
     const [posts, setPosts] = useState('')
     const [title, setTitle] = useState('')
@@ -47,7 +47,7 @@ const AddTasks = () => {
                 onChange={handleBodyChange}
             />
         </div> 
-        <button>Add Post</button>     
+        <button >Add Post</button>     
     </form>
   )
 }

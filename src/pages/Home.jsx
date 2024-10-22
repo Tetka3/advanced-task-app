@@ -18,6 +18,16 @@ const Home = () => {
             body: "This is the body of the second post"
         }
     ])
+    
+    const addTasks = (task) => {
+        const id = Math.floor(Math.random() * 10000 + 1)
+        console.log(id)
+        console.log(task)
+        const newTask = { id, ...task}
+        console.log(newTask)
+        // setTasks([...tasks, newTask])
+        
+    } 
 
     const deleteTask = (id) => {
         setTasks(tasks.filter((task) => task.id !== id))
@@ -25,7 +35,7 @@ const Home = () => {
   return (
     <div className="home">
         <Navbar /> 
-        <AddTasks />
+        <AddTasks onAdd={addTasks}/>
         {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask}/>: 'No Tasks To Show'}         
     </div>
   )
