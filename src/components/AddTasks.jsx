@@ -17,16 +17,17 @@ const AddTasks = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const addNewPost = {title: "new"}
         
-        console.log('click')
-        setPosts({...posts, addNewPost})
+        if(!title && !body) {
+            alert('Add a title & text')
+            return
+        }
         setTitle('')
         setBody('')
     }
 
   return (
-    <form className='formData'>
+    <form className='formData' onSubmit={handleSubmit}>
         <div className='title'>
             <label>Add Title</label>
             <input 
@@ -44,7 +45,7 @@ const AddTasks = () => {
                 onChange={handleBodyChange}
             />
         </div> 
-        <button onClick={handleSubmit}>Add Post</button>     
+        <button>Add Post</button>     
     </form>
   )
 }
